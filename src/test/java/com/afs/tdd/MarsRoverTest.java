@@ -16,7 +16,7 @@ class MarsRoverTest {
         assertEquals("0 1 N",marsRover.getStatus());
 
     }
-    //00EM -< 01E
+    //00EM -< 10E
     @Test
     void should_go_to_0_1_N_when_execute_command_given_0_0_E_and_M() {
         //given
@@ -25,5 +25,16 @@ class MarsRoverTest {
         marsRover.executeCommon("M");
         //then
         assertEquals("1 0 E",marsRover.getStatus());
+    }
+
+    //00SM -< 0-1S
+    @Test
+    void should_go_to_0_1_N_when_execute_command_given_0_0_S_and_M() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0, "S");
+        //when
+        marsRover.executeCommon("M");
+        //then
+        assertEquals("0 -1 S",marsRover.getStatus());
     }
 }
