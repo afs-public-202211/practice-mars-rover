@@ -57,5 +57,14 @@ class MarsRoverTest {
         assertEquals("0 0 W",marsRover.getStatus());
     }
 
+    @Test
+    void should_go_to_0_1_N_when_execute_command_given_0_0_E_and_L() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0, "E");
+        //when
+        marsRover.executeCommon("L");
+        //then
+        assertEquals("0 0 N",marsRover.getStatus());
+    }
 
 }
