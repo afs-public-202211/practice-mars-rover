@@ -20,7 +20,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_1_N_when_execute_command_given_0_0_S_and_M() {
+    void should_go_to_0_neg1_S_when_execute_command_given_0_0_S_and_M() {
         //given
         MarsRover marsRover = new MarsRover(0,0, "S");
 
@@ -34,7 +34,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_1_N_when_execute_command_given_0_0_E_and_M() {
+    void should_go_to_1_0_E_when_execute_command_given_0_0_E_and_M() {
         //given
         MarsRover marsRover = new MarsRover(0,0, "E");
 
@@ -44,7 +44,7 @@ class MarsRoverTest {
         //then
         assertEquals(1, marsRover.getLocationX());
         assertEquals(0, marsRover.getLocationY());
-        assertEquals("S", marsRover.getDirection());
+        assertEquals("E", marsRover.getDirection());
     }
 
 }
