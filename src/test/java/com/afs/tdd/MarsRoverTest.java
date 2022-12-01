@@ -11,7 +11,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "N");
         //when
-        marsRover.executeCommon("M");
+        marsRover.executeCommond("M");
         //then
         assertEquals("0 1 N",marsRover.getStatus());
 
@@ -22,7 +22,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "E");
         //when
-        marsRover.executeCommon("M");
+        marsRover.executeCommond("M");
         //then
         assertEquals("1 0 E",marsRover.getStatus());
     }
@@ -33,7 +33,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "S");
         //when
-        marsRover.executeCommon("M");
+        marsRover.executeCommond("M");
         //then
         assertEquals("0 -1 S",marsRover.getStatus());
     }
@@ -43,7 +43,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "W");
         //when
-        marsRover.executeCommon("M");
+        marsRover.executeCommond("M");
         //then
         assertEquals("-1 0 W",marsRover.getStatus());
     }
@@ -52,7 +52,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "N");
         //when
-        marsRover.executeCommon("L");
+        marsRover.executeCommond("L");
         //then
         assertEquals("0 0 W",marsRover.getStatus());
     }
@@ -62,7 +62,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "E");
         //when
-        marsRover.executeCommon("L");
+        marsRover.executeCommond("L");
         //then
         assertEquals("0 0 N",marsRover.getStatus());
     }
@@ -72,7 +72,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "S");
         //when
-        marsRover.executeCommon("L");
+        marsRover.executeCommond("L");
         //then
         assertEquals("0 0 E",marsRover.getStatus());
     }
@@ -82,7 +82,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "W");
         //when
-        marsRover.executeCommon("L");
+        marsRover.executeCommond("L");
         //then
         assertEquals("0 0 S",marsRover.getStatus());
     }
@@ -92,7 +92,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "N");
         //when
-        marsRover.executeCommon("R");
+        marsRover.executeCommond("R");
         //then
         assertEquals("0 0 E",marsRover.getStatus());
     }
@@ -102,7 +102,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "E");
         //when
-        marsRover.executeCommon("R");
+        marsRover.executeCommond("R");
         //then
         assertEquals("0 0 S",marsRover.getStatus());
     }
@@ -112,7 +112,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "S");
         //when
-        marsRover.executeCommon("R");
+        marsRover.executeCommond("R");
         //then
         assertEquals("0 0 W",marsRover.getStatus());
     }
@@ -122,7 +122,7 @@ class MarsRoverTest {
         //given
         MarsRover marsRover = new MarsRover(0,0, "W");
         //when
-        marsRover.executeCommon("R");
+        marsRover.executeCommond("R");
         //then
         assertEquals("0 0 N",marsRover.getStatus());
     }
