@@ -80,4 +80,8 @@ public class MarsRover {
     public String getDirection() {
         return direction;
     }
+
+    public void excuteBatchCommand(String batchCommand) {
+
+    }
 }

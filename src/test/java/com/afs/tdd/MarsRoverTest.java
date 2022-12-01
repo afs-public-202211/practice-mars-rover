@@ -172,4 +172,19 @@ class MarsRoverTest {
         assertEquals("N", marsRover.getDirection());
     }
 
+    @Test
+    void should_go_to_1_2_N_when_execute_batchcommand_given_0_0_N_and_MRMLM() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0, "N");
+
+        //when
+        marsRover.excuteBatchCommand("MRMLM");
+
+        //then
+        assertEquals(1, marsRover.getLocationX());
+        assertEquals(2, marsRover.getLocationY());
+        assertEquals("N", marsRover.getDirection());
+    }
+
+
 }
