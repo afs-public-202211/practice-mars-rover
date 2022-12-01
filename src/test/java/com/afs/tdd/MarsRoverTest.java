@@ -37,7 +37,7 @@ class MarsRoverTest {
         //then
         assertEquals("0 -1 S",marsRover.getStatus());
     }
-
+    //00WM -> -10W
     @Test
     void should_go_to_0_1_N_when_execute_command_given_0_0_W_and_M() {
         //given
@@ -47,4 +47,15 @@ class MarsRoverTest {
         //then
         assertEquals("-1 0 W",marsRover.getStatus());
     }
+    @Test
+    void should_go_to_0_1_N_when_execute_command_given_0_0_N_and_L() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0, "N");
+        //when
+        marsRover.executeCommon("L");
+        //then
+        assertEquals("0 0 W",marsRover.getStatus());
+    }
+
+
 }

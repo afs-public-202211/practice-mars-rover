@@ -6,6 +6,11 @@ public class MarsRover {
     private int locationY;
     private String direction;
 
+    private static final String EAST = "E";
+    private static final String SOUTH = "S";
+    private static final String WEST = "W";
+    private static final String NORTH = "N";
+
 
     public MarsRover(int locationX, int locationY, String direction) {
         this.locationX = locationX;
@@ -20,9 +25,25 @@ public class MarsRover {
     public void executeCommon(String direction){
         if (direction == "M"){
             moveForward();
-    }
+        }
+        else if (direction == "L")
+        {
+            moveLeft();
+        }
 
 }
+
+    private void moveLeft() {
+        if(direction.equals(NORTH)){
+            this.direction = WEST;
+        } else if (direction.equals(SOUTH)){
+            this.direction = EAST;
+        } else if (direction.equals(EAST)){
+            this.direction = NORTH;
+        } else if (direction.equals(WEST)){
+            this.direction = SOUTH;
+        }
+    }
 
     private void moveForward() {
         if (this.direction == "E")
@@ -34,4 +55,4 @@ public class MarsRover {
         else if (this.direction == "N")
             this.locationY++;
     }
-    }
+}
