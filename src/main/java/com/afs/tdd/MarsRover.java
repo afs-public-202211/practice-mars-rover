@@ -2,9 +2,9 @@ package com.afs.tdd;
 
 public class MarsRover {
 
-    private final int locationX;
+    private int locationX;
     private int locationY;
-    private final String direction;
+    private String direction;
 
     public MarsRover(int locationX, int locationY, String direction){
         this.locationX= locationX;
@@ -22,6 +22,11 @@ public class MarsRover {
         if(direction.equals("N")){
             locationY++;
         }
+        else if(direction.equals("S")){
+            locationY--;
+        }
+
+
     }
 
 
