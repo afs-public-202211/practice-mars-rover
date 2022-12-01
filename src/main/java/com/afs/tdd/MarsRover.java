@@ -22,14 +22,14 @@ public class MarsRover {
         return String.format("%s %s %s", this.locationX, this.locationY, this.direction);
     }
 
-    public void executeCommond(String commands){
-        if (commands == "M") {
+    public void executeCommond(char command){
+        if (command == 'M') {
             moveForward();
         }
-        else if (commands == "L") {
+        else if (command == 'L') {
             moveLeft();
         }
-        else if (commands == "R") {
+        else if (command == 'R') {
             moveRight();
         }
 
@@ -80,7 +80,7 @@ public class MarsRover {
 
     public void executeBatchCommand(String commands) {
         for (char command : commands.toCharArray()){
-            executeCommond(String.valueOf(command));
+            executeCommond(command);
         }
     }
 }
