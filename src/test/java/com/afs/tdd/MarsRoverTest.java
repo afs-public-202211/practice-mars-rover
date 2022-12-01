@@ -78,13 +78,53 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_1_N_when_execute_command_given_0_0_W_and_R() {
+    void should_go_to_0_1_N_when_execute_command_given_0_0_W_and_L() {
         //given
         MarsRover marsRover = new MarsRover(0,0, "W");
         //when
         marsRover.executeCommon("L");
         //then
         assertEquals("0 0 S",marsRover.getStatus());
+    }
+
+    @Test
+    void should_go_to_0_1_N_when_execute_command_given_0_0_N_and_R() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0, "N");
+        //when
+        marsRover.executeCommon("R");
+        //then
+        assertEquals("0 0 E",marsRover.getStatus());
+    }
+
+    @Test
+    void should_go_to_0_1_N_when_execute_command_given_0_0_E_and_R() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0, "E");
+        //when
+        marsRover.executeCommon("R");
+        //then
+        assertEquals("0 0 S",marsRover.getStatus());
+    }
+
+    @Test
+    void should_go_to_0_1_N_when_execute_command_given_0_0_S_and_R() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0, "S");
+        //when
+        marsRover.executeCommon("R");
+        //then
+        assertEquals("0 0 W",marsRover.getStatus());
+    }
+
+    @Test
+    void should_go_to_0_1_N_when_execute_command_given_0_0_W_and_R() {
+        //given
+        MarsRover marsRover = new MarsRover(0,0, "W");
+        //when
+        marsRover.executeCommon("R");
+        //then
+        assertEquals("0 0 N",marsRover.getStatus());
     }
 
 }
