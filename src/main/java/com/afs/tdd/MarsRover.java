@@ -33,7 +33,6 @@ public class MarsRover {
         }
     }
 
-
     public int getLocationX() {
         return locationX;
     }
