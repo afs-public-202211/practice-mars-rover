@@ -23,36 +23,58 @@ public class MarsRover {
     }
 
     public void executeCommon(String direction){
-        if (direction == "M"){
+        if (direction == "M") {
             moveForward();
         }
-        else if (direction == "L")
-        {
+        else if (direction == "L") {
             moveLeft();
+        }
+        else if (direction == "R") {
+            moveRight();
         }
 
 }
-
-    private void moveLeft() {
+    private void moveRight() {
         if(direction.equals(NORTH)){
-            this.direction = WEST;
-        } else if (direction.equals(SOUTH)){
             this.direction = EAST;
-        } else if (direction.equals(EAST)){
+        }
+        else if(direction.equals(SOUTH)){
+            this.direction = WEST;
+        }
+        else if(direction.equals(EAST)){
+            this.direction = SOUTH;
+        }
+        else if(direction.equals(WEST)){
             this.direction = NORTH;
-        } else if (direction.equals(WEST)){
+        }
+    }
+    private void moveLeft() {
+        if(direction.equals(NORTH)) {
+            this.direction = WEST;
+        }
+        else if (direction.equals(SOUTH)) {
+            this.direction = EAST;
+        }
+        else if (direction.equals(EAST)) {
+            this.direction = NORTH;
+        }
+        else if (direction.equals(WEST)) {
             this.direction = SOUTH;
         }
     }
 
     private void moveForward() {
-        if (this.direction == "E")
+        if (this.direction == "E") {
             this.locationX++;
-        else if (this.direction == "S")
+        }
+        else if (this.direction == "S") {
             this.locationY--;
-        else if (this.direction == "W")
+        }
+        else if (this.direction == "W") {
             this.locationX--;
-        else if (this.direction == "N")
+        }
+        else if (this.direction == "N") {
             this.locationY++;
+        }
     }
 }
