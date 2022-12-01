@@ -1,5 +1,8 @@
 package com.afs.tdd;
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class MarsRover {
 
     private int locationX;
@@ -82,6 +85,9 @@ public class MarsRover {
     }
 
     public void excuteBatchCommand(String batchCommand) {
-
+        Stream.of(batchCommand.split(""))
+                .map (String::new)
+                .forEach(this::excuteCommand);
     }
+
 }
