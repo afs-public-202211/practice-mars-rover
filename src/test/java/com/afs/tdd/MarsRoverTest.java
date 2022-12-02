@@ -153,7 +153,7 @@ class MarsRoverTest {
         assertEquals("0 0 N", result);
     }
     @Test
-    void should_return_02S_when_given_X0_Y0_North_BatchCommand2(){
+    void should_go_0__14_s_when_execute_BatchCommand_R_R_R_R_L_L_L_L_R_R_R_R_L_L_L_L_R_R_R_R_L_L_L_L_M_M_L_L_M_M_L_L_M_M_L_L_L_L_M_M_R_R_M_M_R_R_R_L_L_L_M_M_M_M_L_R_M_M_M_M_M_M_M_M_M_M_M_M(){
         //given
         MarsRover marsRover = new MarsRover(0,0,"N");
         String Commands = "RRRRLLLLRRRRLLLLRRRRLLLLMMLLMMLLMMLLLLMMRRMMRRRLLLMMMMLRMMMMMMMMMMMM";
